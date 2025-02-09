@@ -1,11 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import Link from "next/link";
-import { FaPlay, FaRegHeart } from "react-icons/fa6"
 import { ButtonPlay } from "../Button/ButtonPlay";
 import { ButtonHeart } from "../Button/ButtonHeart";
-import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { authFirebase } from "@/app/firebaseConfig";
+
 
 export const SongItem2 = (props:{item: any})=>{
     const {item}=props;

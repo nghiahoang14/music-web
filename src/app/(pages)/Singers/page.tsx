@@ -1,8 +1,7 @@
-import { CardItem } from "@/app/components/Card/CardItem";
+
 import { Singers } from "@/app/components/Singers/Singers";
 import { Title } from "@/app/components/title/Title";
-import { dbFirebase } from "@/app/firebaseConfig";
-import { onValue, ref } from "firebase/database";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

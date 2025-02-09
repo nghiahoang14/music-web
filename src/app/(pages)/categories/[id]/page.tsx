@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { CardInfo } from "@/app/components/Card/CardInfo";
 import { SongItem2 } from "@/app/components/Songs/SongItem2";
 import { Title } from "@/app/components/title/Title";

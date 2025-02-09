@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import { authFirebase, dbFirebase } from "@/app/firebaseConfig";
+import { authFirebase } from "@/app/firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 import { useRouter } from "next/navigation";

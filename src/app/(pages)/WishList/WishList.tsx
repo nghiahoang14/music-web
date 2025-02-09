@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 
 import { SongItem2 } from "@/app/components/Songs/SongItem2";
 import { authFirebase, dbFirebase } from "@/app/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
-import { get, onValue, ref } from "firebase/database";
+import { get,  ref } from "firebase/database";
 import { useEffect, useState } from "react";
 
 export const WishList=()=>{

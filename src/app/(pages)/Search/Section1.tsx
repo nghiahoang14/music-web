@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import { SongItem2 } from "@/app/components/Songs/SongItem2";
 import { dbFirebase } from "@/app/firebaseConfig";
-import { get, onValue, ref } from "firebase/database";
+import { get, ref } from "firebase/database";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 

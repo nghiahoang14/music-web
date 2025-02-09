@@ -1,31 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import Link from "next/link";
 
 import { ButtonPlay } from "../Button/ButtonPlay";
 import { ButtonHeart } from "../Button/ButtonHeart";
-import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { authFirebase } from "@/app/firebaseConfig";
+
 
 
 export const SongItem=(props:{item:any})=>{
     const {item}=props;
-    // const [isActive,setIsActive]=useState(false);
-    //   useEffect(()=>{
-    //           onAuthStateChanged(authFirebase,(user)=>{
-    //             if(user){
-    //               const userId=user.uid;
-    //               console.log(userId)
-    //               const wishlist=item.wishlist;
-    //               console.log(wishlist)
-    //               if(wishlist){
-    //               if(wishlist[userId]){
-    //                 setIsActive(true)
-    //               }
-    //             }
-    //             }
-    //           })
-    //         },[])
+   
     return(
         <> 
         <div className="flex px-[10px] py-[10px] bg-[#212121] rounded-[15px] items-center " song-id={item.id}>

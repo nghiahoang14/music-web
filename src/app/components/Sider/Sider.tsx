@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 
 import Link from "next/link"
-import { IoMdHome } from "react-icons/io";
+
 import { FaMusic } from "react-icons/fa";
 import { FaPodcast } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";

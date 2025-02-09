@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { CardInfo } from "@/app/components/Card/CardInfo";
 import { SongItem2 } from "@/app/components/Songs/SongItem2";
 // import { SongItem2 } from "@/app/components/Songs/SongItem2";
 import { Title } from "@/app/components/title/Title";
 import { dbFirebase } from "@/app/firebaseConfig";
-import { get, onValue, ref } from "firebase/database";
+import { get,  ref } from "firebase/database";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

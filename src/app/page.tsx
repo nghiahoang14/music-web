@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { Title } from "./components/title/Title";
 import { SongItem } from "./components/Songs/SongItem";
 import { CardItem } from "./components/Card/CardItem";
-import { get, onValue, ref } from "firebase/database";
+import { get,  ref } from "firebase/database";
 import { dbFirebase } from "./firebaseConfig";
 import { useEffect, useState } from "react";
 
