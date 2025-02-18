@@ -40,9 +40,16 @@ const [dataFinalSection1,setDataFinalSection1]=useState<any>(null);
           
       }})
       for (const item of dataSection1) {
-        const itemSinger = await get(ref(dbFirebase,'/singers/' + item.singerId[0]));
-        const dataSinger=itemSinger.val();
-        item.singer=dataSinger.title;
+        let singerNames="";
+        for (const singerId of item.singerId) {
+          const itemSinger = await get(ref(dbFirebase,'/singers/'+singerId));
+          if(itemSinger.exists()){
+            const dataSinger=itemSinger.val();
+            singerNames+=(singerNames?" , ":"")+dataSinger.title;
+
+          }
+        }
+        item.singer=singerNames;
        }
        setDataFinalSection1(dataSection1);
       }

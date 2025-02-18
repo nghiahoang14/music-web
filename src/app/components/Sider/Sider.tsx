@@ -16,9 +16,10 @@ import { authFirebase } from "@/app/firebaseConfig";
 import { MenuItem } from "./MenuItem";
 
 export const Sider =()=>{
-    const [isLogin,setIsLogin]=useState<boolean>();
+    const [isLogin,setIsLogin]=useState<boolean>(false);
     useEffect(()=>{
      onAuthStateChanged(authFirebase,(user)=>{
+        console.log(user);
         if(user){
             setIsLogin(true);
         } else{
@@ -75,7 +76,7 @@ export const Sider =()=>{
        <div className="h-[100vh] bg-[#212121] fixed w-[280px]"> 
         <div className="bg-[#1C1C1C] py-[25px] pl-[20px]">
             <Link href="/">
-            <img src="/Logo.svg" alt="Logo" className="h-[42px]  w-auto"></img>
+            <img src="/demo/logo.png" alt="Logo" className="h-[42px]  w-auto"></img>
             </Link>
         </div>
         <nav className="py-[30px] px-[20px]">

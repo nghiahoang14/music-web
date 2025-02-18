@@ -6,15 +6,15 @@ import { ButtonPlay } from "../Button/ButtonPlay";
 import { ButtonHeart } from "../Button/ButtonHeart";
 
 
-export const SongItem2 = (props:{item: any})=>{
+export const  SongItem2 = (props:{item: any})=>{
     const {item}=props;
    
     return(
         <>
-        <div className="flex items-center justify-between bg-[#212121] py-[10px] px-[18px] rounded-[15px]">
+        <div className="flex items-center justify-between bg-[#212121] py-[10px] px-[18px] rounded-[15px] " song-id={item.id}>
               {/* left */}
               <div className="w-[40%] flex items-center gap-[12px]">
-               <ButtonPlay item={item} className="text-[24px] text-white"/>
+               <ButtonPlay item={item} className="text-[24px] text-white "/>
                 <div className="w-[42px] truncate rounded-[8px] aspect-square">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover"></img>
                 </div>

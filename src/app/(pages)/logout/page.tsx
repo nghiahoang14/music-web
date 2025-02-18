@@ -9,6 +9,7 @@ export default function LogoutPage() {
     const router=useRouter();
     useEffect(()=>{
         signOut(authFirebase).then(()=>{
+          
             router.push("/Login")
         }).catch((error)=>{
             console.log(error)

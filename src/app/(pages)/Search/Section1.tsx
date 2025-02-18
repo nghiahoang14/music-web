@@ -24,7 +24,7 @@ export const Section1 =()=>{
             const data = item.val();
             console.log(key);
             console.log(data);
-            if(data.title.includes(defaultKeyword)){
+            if(data.title.toLowerCase().includes(defaultKeyword.toLowerCase()) ){
             dataSection1.push(
               {
                 id:key,
@@ -34,15 +34,22 @@ export const Section1 =()=>{
                 link:`/song/${key}`,
                 time:"4.32",
                 singerId:data.singerId,
-                audio:data.audio
+                audio:data.audio,
+                wishlist:data.wishlist
               }
             )
           }
            })
            for (const item of dataSection1) {
-            const itemSinger = await get(ref(dbFirebase,'/singers/' + item.singerId[0]));
-            const dataSinger=itemSinger.val();
-            item.singer=dataSinger.title;
+            let singerNames = "";
+            for (const singerId of item.singerId) {
+                const itemSinger = await get(ref(dbFirebase, "/singers/" + singerId));
+                if (itemSinger.exists()) {
+                    const dataSinger = itemSinger.val();
+                    singerNames += (singerNames ? ", " : "") + dataSinger.title;
+                }
+            }
+            item.singer = singerNames;
            }
            setDatafinal(dataSection1);
           }

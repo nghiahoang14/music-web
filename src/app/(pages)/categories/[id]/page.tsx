@@ -42,9 +42,16 @@ export const metadata: Metadata = {
                 )
             }})
             for (const item of dataSection2) {
-              const itemSinger = await get(ref(dbFirebase,'/singers/' + item.singerId[0]));
-              const dataSinger=itemSinger.val();
-              item.singer=dataSinger.title;
+              let singerNames="";
+              for (const singerId of item.singerId) {
+                const itemSinger = await get(ref(dbFirebase,'/singers/'+singerId));
+                if(itemSinger.exists()){
+                  const dataSinger=itemSinger.val();
+                  singerNames+=(singerNames?" , ":"")+dataSinger.title;
+      
+                }
+              }
+              item.singer=singerNames;
              }  
     
      

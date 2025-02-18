@@ -4,15 +4,24 @@ import { FaPlay ,FaBackwardStep, FaForwardStep, FaPause } from "react-icons/fa6"
 
 export const PlayAction=()=>{
     const handlePlay=()=>{
+        const currentSong=document.querySelector("[song-id].active");
+        const elementPause = currentSong?.querySelector(".inner-element-pause");
+        const elementPlay = currentSong?.querySelector(".inner-element-play");
         const elementPlayAudio: any=document.querySelector(".play-audio");
         const elementButtonPlay = elementPlayAudio.querySelector(".inner-button-play");
         const elementAudio = elementPlayAudio?.querySelector(".inner-audio");
         if(elementButtonPlay.classList.contains("play")){
+            elementPause?.classList.add("hidden");
+            elementPlay?.classList.remove("hidden");
             elementButtonPlay.classList.remove("play");
             elementAudio.pause();
+            elementAudio.muted = true;
         } else{
+            elementPause?.classList.remove("hidden");
+            elementPlay?.classList.add("hidden");
             elementButtonPlay.classList.add("play");
             elementAudio.play();
+            elementAudio.muted = false;
         }
     }
     const handleNext=()=>{

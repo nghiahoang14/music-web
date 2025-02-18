@@ -18,10 +18,18 @@ export const metadata: Metadata = {
     const songsSnapshot= await get(ref(dbFirebase,`/songs/${id}`));
       datafinal=songsSnapshot.val();
       console.log(datafinal)
-    const singerSnapshot = await get(ref(dbFirebase,`/singers/${datafinal.singerId[0]}`));
-        const dataSinger=singerSnapshot.val();
-          datafinal["singer"]=dataSinger.title;
-        
+      let singerNames="";
+        for (const singerId of datafinal.singerId) {
+         
+          const itemSinger = await get(ref(dbFirebase,'/singers/'+singerId));
+          if(itemSinger.exists()){
+            const dataSinger=itemSinger.val();
+            singerNames+=(singerNames?" , ":"")+dataSinger.title;
+
+          
+        }
+        datafinal["singer"]=singerNames;
+       }         
             // section 3
             const dataSection3: any[] =[];
             const songsRef =await  get(ref(dbFirebase, 'songs'));
@@ -47,10 +55,17 @@ export const metadata: Metadata = {
               
           }})
           for (const item of dataSection3) {
-            const itemSinger = await get(ref(dbFirebase,'/singers/' + item.singerId[0]));
-            const dataSinger=itemSinger.val();
-            item.singer=dataSinger.title;
-           }  
+            let singerNames="";
+            for (const singerId of item.singerId) {
+              const itemSinger = await get(ref(dbFirebase,'/singers/'+singerId));
+              if(itemSinger.exists()){
+                const dataSinger=itemSinger.val();
+                singerNames+=(singerNames?" , ":"")+dataSinger.title;
+    
+              }
+            }
+            item.singer=singerNames;
+           }   
     
     return (
    <>   {/* cardInfo */}

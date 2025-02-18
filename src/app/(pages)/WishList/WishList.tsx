@@ -42,10 +42,15 @@ export const WishList=()=>{
                        }
                         })
                         for (const item of dataSection1) {
-                         const itemSinger = await get(ref(dbFirebase,'/singers/' + item.singerId[0]));
-                         const dataSinger=itemSinger.val();
-                         console.log(dataSinger)
-                         item.singer=dataSinger.title;
+                          let singerNames = "";
+                          for (const singerId of item.singerId) {
+                          const itemSinger = await get(ref(dbFirebase, "/singers/" + singerId));
+                          if (itemSinger.exists()) {
+                          const dataSinger = itemSinger.val();
+                          singerNames += (singerNames ? ", " : "") + dataSinger.title;
+                        }
+                }
+                item.singer = singerNames;
                         }
                         setDataFinal(dataSection1);
                        }
