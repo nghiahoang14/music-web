@@ -40,29 +40,40 @@
       "1": {
         "image": "https://backend.daca.vn/assets/images/tang-duy-tan.jpg",
         "title": "Tăng Duy Tân",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "description": "Tăng Duy Tân - ca sĩ, nhạc sĩ trẻ tài năng với nhiều ca khúc triệu view."
       },
       "2": {
         "image": "https://backend.daca.vn/assets/images/thanh-dat.jpg",
         "title": "Thành Đạt",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "description": "Thành Đạt - giọng ca trẻ triển vọng với phong cách âm nhạc đầy cảm xúc."
       },
       "3": {
         "image": "https://backend.daca.vn/assets/images/cao-thai-son.jpg",
         "title": "Cao Thái Sơn",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "description": "Cao Thái Sơn - ca sĩ nổi tiếng với những bản ballad ngọt ngào, sâu lắng."
       },
       "4": {
         "image": "https://backend.daca.vn/assets/images/tlong.jpg",
         "title": "TLong",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "description": "TLong - ca sĩ trẻ với phong cách âm nhạc đa dạng và đầy sáng tạo."
       },
       "5": {
         "image": "https://backend.daca.vn/assets/images/nal.jpg",
         "title": "Nal",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "description": "Nal - chủ nhân của nhiều bản hit đình đám với giai điệu cuốn hút."
+      },
+      "6": {
+        "image": "https://res.cloudinary.com/dn63kxzvu/image/upload/v1740136972/1a35ad17ecb43d66b86c19773678ba51_varbye.jpg",
+        "title": "Châu Khải Phong",
+        "description": "Châu Khải Phong - ca sĩ nổi tiếng với nhiều ca khúc hit trong dòng nhạc trẻ và ballad."
+      },
+      "7": {
+        "image": "https://res.cloudinary.com/dn63kxzvu/image/upload/v1740137866/avatars-tqmmjyCLbLVKGwY0-bO9PCw-t240x240_moa0d3.jpg",
+        "title": "DJ Rum Barcadi",
+        "description": "DJ Rum Barcadi - DJ tài năng với những bản remix cực chất."
       }
     },
+  
     "songs": {
       "1": {
         "image": "https://backend.daca.vn/assets/images/cat-doi-noi-sau.jpg",
@@ -104,10 +115,19 @@
         "image": "https://backend.daca.vn/assets/images/ruou-mung-hoa-nguoi-dung.jpg",
         "title": "Rượu Mừng Hóa Người ",
         "categoryId": "1",
-        "singerId": ["4", "3"],
+        "singerId": ["4", "3"], 
         "audio": "https://backend.daca.vn/assets/audios/ruou-mung-hoa-nguoi-dung.mp3",
         "lyric": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         "listen": 22800
-      }
+      },
+      "6": {
+    "image": "https://res.cloudinary.com/dn63kxzvu/image/upload/v1740136972/1a35ad17ecb43d66b86c19773678ba51_varbye.jpg",
+    "title": "Nếu Ta Ngược Lối",
+    "categoryId": "3",
+    "singerId": ["6", "7"],
+    "audio": "https://res.cloudinary.com/dn63kxzvu/video/upload/v1740136974/NeuTaNguocLoiRemix2019-ChauKhaiPhongDJRumBarcadi-5863187_ext8rp.mp3",
+    "lyric": "Mình đã từng là của nhau, ngỡ bền lâu\nVà đã yêu nhau thật đậm sâu\nYêu hết trọn cuộc đời này, hứa không đổi thay\nMà nay em bước như vậy\n\nAnh cố nhặt lại kỷ niệm, em đánh rơi\nDù biết em chẳng còn nghĩ tới\nTa đã nhiều lần trải qua, bao nhiêu xót xa\nMà nay sao ta gục ngã.\n\nTự cho nhau hai đường lối, nếu yêu nhau sẽ trở về bên nhau thôi\nDù anh có níu kéo em cũng xa rồi\nDặn lòng sẽ không buông, nhủ lòng sẽ không buông\nĐành vùi chôn ký ức với niềm đau\n\nNgày mai nếu lỡ gặp nhau, đừng bận lòng anh chẳng sao đâu\nAnh vội vã rồi lại ngã nơi tim em rồi\nĐoạn đường ngắn phía trước, còn anh cứ mãi lối ngược\nNếu yêu nhau sẽ trở về bên nhau.\n\nAnh cố nhặt lại kỷ niệm, em đánh rơi\nDù biết em chẳng còn nghĩ tới\nTa đã nhiều lần trải qua, bao nhiêu xót xa\nMà nay sao ta gục ngã.\n\nTự cho nhau hai đường lối, nếu yêu nhau sẽ trở về bên nhau thôi\nDù anh có níu kéo em cũng xa rồi\nDặn lòng sẽ không buông, nhủ lòng sẽ không buông\nĐành vùi chôn ký ức với niềm đau\n\nNgày mai nếu lỡ gặp nhau, đừng bận lòng anh chẳng sao đâu\nAnh vội vã rồi lại ngã nơi tim em rồi\nĐoạn đường ngắn phía trước, còn anh cứ mãi lối ngược\nNếu yêu nhau sẽ trở về bên nhau.",
+    "listen": 27900
+  }
     }
   }

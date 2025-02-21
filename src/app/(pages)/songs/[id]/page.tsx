@@ -77,7 +77,7 @@ export const metadata: Metadata = {
      {/* Lời bài hát */}
      <div className="mt-[30px]">
       <Title title="Lời Bài Hát"/>
-      <div className=" bg-[#212121] rounded-[15px] text-white p-[20px] whitespace-pre-line">
+      <div className=" bg-[#212121] rounded-[15px] text-white p-[20px] whitespace-pre-line  "   >
    {datafinal.lyric}
       </div>
      </div>

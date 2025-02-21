@@ -15,5 +15,6 @@ export default {
       '2xl':"1280px"
     },
   },
-  plugins: [],
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [require("@tailwindcss/line-clamp")],
 } satisfies Config;
